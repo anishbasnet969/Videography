@@ -36,10 +36,11 @@ class VineDetailView(APIView):
 
     def put(self, request, id=None):
         instance = self.get_object(id=id)
+        u_name = instance.user.username
         serializer =  VineSerializer(instance, data=request.data)
         if serializer.is_valid():
             serializer.save()
-            return Response(serializer.data,status=200)
+            return Response(serializer.data,status=200,username=u_name)
         return Response(serializer.errors, status=400)
     
     def delete(self, request, id=None):

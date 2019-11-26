@@ -13,6 +13,7 @@ import Register from './components/accounts/Register';
 import Login from './components/accounts/Login';
 import UploadVideo from './components/UploadVideo';
 import Posts from './components/Posts'
+import Renderer from './components/Renderer';
 
 
 
@@ -38,6 +39,7 @@ class App extends Component{
                   <Route exact path="/upload" component={UploadVideo} />
                   <Route exact path="/" component={Posts} />
                   <Route exact path="/register" component={Register} />
+                  <Route exact path="/videos/:id" component={Renderer} />
                   <Route exact path="/login" component={Login} />
                 </Switch>
               </div>

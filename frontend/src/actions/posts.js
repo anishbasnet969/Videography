@@ -1,16 +1,31 @@
 import axios from 'axios';
 import { tokenConfig } from './auth';
-import { GET_POSTS,ADD_POST,DELETE_POST } from './types';
+import { GET_POSTS,ADD_POST,DELETE_POST,GET_POST } from './types';
 
 export const getPosts = () => (dispatch,getState) => {
     axios
     .get('http://localhost:8000/vines/',tokenConfig(getState))
     .then(res => {
+        console.log(res.data)
         dispatch({
             type: GET_POSTS,
             payload: res.data
         });
     })
+}
+
+export const getPost = id => (dispatch,getState) => {
+
+    axios
+    .get(`http://localhost:8000/vines/${id}/`,tokenConfig(getState))
+    .then(res => {
+        console.log(res.data)
+        dispatch({
+            type: GET_POST,
+            payload: res.data
+        });           
+    })
+
 }
 
 export const deletePost = id => (dispatch,getState) => {
