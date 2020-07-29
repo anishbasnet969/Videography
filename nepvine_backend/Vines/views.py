@@ -5,7 +5,6 @@ from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework.response import Response
 from django.http import HttpResponse
 
-
 class VineView(APIView):
     parser_classes = (MultiPartParser, FormParser)
 

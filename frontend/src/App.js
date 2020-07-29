@@ -15,11 +15,8 @@ import UploadVideo from './components/UploadVideo';
 import Posts from './components/Posts'
 import Renderer from './components/Renderer';
 
-
-
 import {Provider} from 'react-redux';
 import store from './store';
-
 
 
 class App extends Component{
