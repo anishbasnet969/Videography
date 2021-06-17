@@ -94,7 +94,7 @@ CORS_ALLOW_HEADERS = [
 ]
 
 
-ROOT_URLCONF = 'nepvine_backend.urls'
+ROOT_URLCONF = 'Videography.urls'
 
 TEMPLATES = [
     {
@@ -112,7 +112,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'nepvine_backend.wsgi.application'
+WSGI_APPLICATION = 'Videography.wsgi.application'
 
 
 # Database
